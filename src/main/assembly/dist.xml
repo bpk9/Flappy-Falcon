@@ -1,0 +1,35 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.0">
+  <id>distribution</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+
+  <dependencySets>
+    <dependencySet>
+      <useProjectArtifact>false</useProjectArtifact>
+      <useTransitiveDependencies>false</useTransitiveDependencies>
+      <unpack>false</unpack>
+      <scope>runtime</scope>
+      <fileMode>0755</fileMode>
+      <directoryMode>0755</directoryMode>
+      <outputDirectory>bin</outputDirectory>
+    </dependencySet>
+    <dependencySet>
+      <useProjectArtifact>false</useProjectArtifact>
+      <useTransitiveDependencies>true</useTransitiveDependencies>
+      <unpack>false</unpack>
+      <scope>runtime</scope>
+      <fileMode>0644</fileMode>
+      <directoryMode>0755</directoryMode>
+      <outputDirectory>lib</outputDirectory>
+
+      <includes>
+        <include>com.google.api-client:google-api-client</include>
+        <include>com.google.oauth-client:google-oauth-client-jetty</include>
+        <include>com.google.apis:google-api-services-sheets</include>
+        <include>com.google.apis:google-api-services-oauth2</include>
+      </includes>
+
+    </dependencySet>
+  </dependencySets>
+</assembly>
