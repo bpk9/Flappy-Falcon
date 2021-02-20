@@ -1,2 +1,2 @@
 # Flappy Falcon
-Flappy Bird emulator using Google Sheets API to store leaderboard information
+Flappy Bird remake using Google Sheets API to store leaderboard information
